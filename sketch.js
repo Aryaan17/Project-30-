@@ -60,6 +60,8 @@ function setup() {
 function draw() {
   background(0,0,0);
   Engine.update(engine);
+  polygon.display();
+
   stand.display();
   b1.display();
   b2.display();
@@ -88,7 +90,9 @@ function draw() {
   b24.display();
   b25.display();
 
-  polygon.display();
+  
+
+
 
   imageMode(CENTER);
   image(pol_img, polygon.body.position.x, polygon.body.position.y, 40, 40);
