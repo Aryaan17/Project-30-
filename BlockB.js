@@ -30,5 +30,11 @@ class BlockB{
         image(this.image, this.body.position.x, this.body.position.y, 30, 30);
         pop()
       }
-    }  
+    }
+    score(){
+      if(this.visibility <105 && this.visibility> 0){
+        score = score + 1;
+      }
+    }
+     
 }

@@ -11,9 +11,14 @@ var b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15, b16;
 var b17, b18, b19, b20, b21, b22, b23, b24, b25;
 var polygon, pol_img;
 var sling;
+var bgcolor, bg;
+var score = 0;
+
 function preload() {
   pol_img = loadImage("Polygon.png");
-  
+  //getBackground();
+  //sbgcolor = bg;
+
 }
 
 function setup() {
@@ -58,8 +63,9 @@ function setup() {
 }
 
 function draw() {
-  background(0,0,0);
+  background(0, 0, 0);
   Engine.update(engine);
+
   polygon.display();
 
   stand.display();
@@ -79,7 +85,6 @@ function draw() {
   b14.display();
   b15.display();
   b16.display();
-  stand2.display();
   b17.display();
   b18.display();
   b19.display();
@@ -90,7 +95,37 @@ function draw() {
   b24.display();
   b25.display();
 
+  stand2.display();
+
+  textSize(25);
   
+  text("Score: " + score, 720, 40);
+
+  b1.score();
+  b2.score();
+  b3.score();
+  b4.score();
+  b5.score();
+  b6.score();
+  b7.score();
+  b8.score();
+  b9.score();
+  b10.score();
+  b11.score();
+  b12.score();
+  b13.score();
+  b14.score();
+  b15.score();
+  b16.score();
+  b17.score();
+  b18.score();
+  b19.score();
+  b20.score();
+  b21.score();
+  b22.score();
+  b23.score();
+  b24.score();
+  b25.score();  
 
 
 
@@ -114,3 +149,21 @@ function keyPressed(){
     sling.attach(polygon.body);
   }
 }
+
+/*async function getBackground(){
+  var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
+  var jsonresponse = await response.json();
+  var date_time = jsonresponse.datetime;
+  var hour = date_time.slice(11,13);
+  console.log(hour);
+  
+  if(hour>06 && hour<18){
+      bg = "lightgreen";
+      console.log(hour);
+  }
+  else{
+      bg = "black";
+      console.log(hour);
+  }
+  
+}*/

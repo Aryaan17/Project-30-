@@ -31,4 +31,9 @@ class BlockA{
         pop()
       }
     }  
+    score(){
+      if(this.visibility <105 && this.visibility> 0){
+        score = score + 1;
+      }
+    }
 }
